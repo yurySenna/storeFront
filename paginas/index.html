@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+    <title>Loja</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div class="faixa-descontos">
+    <span>🔥 SUPER PROMOÇÃO: Frete grátis acima de R$199 | 20% OFF em Smartwatches | Aproveite hoje! 🔥</span>
+  </div>
+    <header>
+        <div class="cabecalho">
+            <div class="menu-amb">
+                <button onclick="mostrarMenu()">☰</button>
+            </div>
+            <div class="pesquisa">
+                <input type="text" name="" id="searchInput" placeholder="O que você procura?">
+                <button class="lupa">
+                    <img src="img/lup.png" alt="">
+                </button>
+            </div>
+
+            <div class=" logo">
+                <img src="img/log-sen1.png" alt="">
+            </div>
+
+            <div class="cep">
+                <img src="img/pin.png" alt="">
+                <p>Informe seu Cep</p>
+                <button onclick="mostrarCep()"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#000">
+                        <path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z" />
+                    </svg></button>
+            </div>
+            <div class="login">
+                <img src="img/user1.png" alt="">
+                <p>Entrar</p>
+                <button onclick="abrirLogin()"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#000">
+                        <path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z" />
+                    </svg></button>
+
+            </div>
+
+            <div class="carrinho">
+                <button class="botao-carrinho" onclick="abrirCarrinho()"><img src="img/carrinho.png" alt="carrinho compras" class="img-icon"></button>
+                <div class="contador" id="contador-carrinho">0</div>
+            </div>
+
+        </div>
+
+
+    </header>
+    <main>
+         
+        <!-- menu lateral  -->
+        <div class="menu-lateral" id="menu-lateral">
+            <div class="topo-menu"><a href="">Faça seu login</a>
+
+                <button class="fechar-menu" onclick="fecharMenu()">X</button>
+            </div>
+
+            <div class="btn-nav-menu" id="btn-nav-menu">
+            
+            </div>
+            <div class="nav-menu" id="menu">
+                <hr>
+            </div>
+            <hr>
+            <span><strong>Navegue por Marcas</strong></span>
+            <div class="compre-marca" id="marca"></div>
+
+        </div>
+        <div class="container">
+            <div class="list">
+
+                <div class="item active">
+                    <div class="product-img">
+                        <img src="img/apple-watch.png" alt="apple watch">
+                    </div>
+                    <div class="content">
+                        <!-- <p class="product-tag">Novo Lançamento</p> -->
+                        <p class="product-name">Apple Watch Series 10</p>
+                        <p class="description">
+                            O smartwatch mais avançado do mercado. Monitoramento completo de saúde, GPS integrado, tela
+                            AMOLED de alta resolução.
+                        </p>
+                        <a href="smartwatch.html"><button class="btn">Saiba Mais </button></a>
+
+                    </div>
+
+                </div>
+
+                <div class="item">
+                    <div class="product-img">
+                        <img src="img/airpods.png" alt="airpods">
+                    </div>
+                    <div class="content">
+                        <p class="product-tag">Som premiun</p>
+                        <p class="product-name">Air Pods Max</p>
+                        <p class="description">
+                            Experimente o som em sua forma mais pura. Cancelamento de ruido adaptativo, qualidade de
+                            audio
+                            excepcional e design ergonomico para o maximo conforto.
+                        </p>
+                        <a href="airpods.html"><button class="btn">Saiba Mais </button></a>
+
+                    </div>
+
+                </div>
+                <div class="item">
+                    <div class="product-img">
+                        <img src="img/games/vision1.png" alt="vision">
+                    </div>
+                    <div class="content">
+                        <p class="product-tag">Alta Performace</p>
+                        <p class="product-name">Vision Pro</p>
+                        <p class="description">
+                            Realidade aumentada imersiva com o Apple Vision Pro: inovação ao alcance dos olhos
+                        </p>
+                        <a href="games.html"><button class="btn">Saiba Mais </button></a>
+
+                    </div>
+
+                </div>
+
+                <div class="item">
+                    <div class="product-img">
+                        <img src="img/notebooks/note2.png" alt="notebook">
+                    </div>
+                    <div class="content">
+                        <p class="product-name">Notebook Lenovo IdeaPad 1i</p>
+                        <p class="description">
+                            Intel Core i3 4GB RAM - 256GB SSD 15,6
+                        </p>
+                        <a href="notebooks.html"><button class="btn">Saiba Mais </button></a>
+
+                    </div>
+
+                </div>
+
+                <div class="item">
+                    <div class="product-img">
+                        <img src="img/tvs/tv-promo85.png" alt="tv">
+                    </div>
+                    <div class="content">
+                        <p class="product-name">Smart TV 85” 4K UHD LED Samsung </p>
+                        <p class="description">
+                            A Smart TV Samsung Crystal UHD de 85" é a escolha ideal para quem busca uma TV de
+                            alta qualidade com imagem e som impecáveis.
+                        </p>
+                        <a href="tv-video.html"><button class="btn">Saiba Mais </button></a>
+
+                    </div>
+
+                </div>
+
+                <div class="item">
+                    <div class="product-img">
+                        <img src="img/games/playsttation.png" alt="playsttation">
+                    </div>
+                    <div class="content">
+                        <p class="product-name">Console PlayStation 5 Pro Sony</p>
+                        <p class="description">
+                            Com o console PlayStation 5 Pro, os maiores criadores de jogos do mundo
+                            podem melhorar seus jogos com recursos incríveis
+                        </p>
+                        <a href="games.html"><button class="btn">Saiba Mais </button></a>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="arrows">
+                <button class="arrow-btn" id="prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff"
+                        class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                        <path
+                            d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                    </svg>
+                </button>
+                <button class="arrow-btn" id="next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff"
+                        class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path
+                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                    </svg>
+                </button>
+
+            </div>
+            <div class="indicators">
+                <div class="dots">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+        <section class="grade">
+            <h2>Navegue por Categorias</h2>
+            <div class="nav-categorias">
+                <a href="smartphones.html">
+                    <img src="img/smartphones/celulares.webp" alt="">
+                </a>
+                <a href="eletrodomesticos.html">
+                    <img src="img/eletrodomesticos/eletro.webp" alt="">
+                </a>
+                <a href="games.html">
+                    <img src="img/games/games.webp" alt="">
+                </a>
+                <a href="audio.html">
+                    <img src="img/audio.webp" alt="">
+                </a>
+                <a href="smartwatch.html">
+                    <img src="img/smartwatches.webp" alt="">
+                </a>
+                <a href="">
+                    <img src="img/beleza.webp" alt="">
+                </a>
+                <a href="tv-video.html">
+                    <img src="img/tvs/tvs.webp" alt="">
+                </a>
+                <a href="informatica.html">
+                    <img src="img/info.webp" alt="">
+                </a>
+                <a href="">
+                    <img src="img/eletroport.webp" alt="">
+                </a>
+            </div>
+
+
+        </section>
+    
+        <section class="grade">
+            <section class="propagandas">
+            <div class="banner-ofertas">
+                <h2>🔥 Super Ofertas da Semana!</h2>
+                <p>Descontos imperdíveis em celulares, notebooks e smart TVs</p>
+            </div>
+            </section>
+            <div class="secao-cards" id="secao-promocao">
+                
+            </div>
+        </section>
+
+        <section class="grade">
+            <h2>Smartphones</h2>
+            <div class="secao-cards" id="secao-smartphones">
+                
+            </div>
+        </section>
+        <section class="grade">
+            <h2>Notebooks</h2>
+            <div class="secao-cards" id="secao-notebooks">
+             
+            </div>   
+        </section>
+
+        <section class="grade">
+            <h2>Tablets</h2>
+            <div class="secao-cards" id="secao-tablets">
+                
+            </div>
+        </section>
+
+         <section class="grade">
+            <h2>Tv e Video</h2>
+            <div class="secao-cards" id="secao-tvs">
+
+            </div>
+                
+        </section>
+
+        <section class="grade">
+            <h2>Eletrodomésticos</h2>
+            <div class="secao-cards" id="secao-eletro">
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+<div id="modal" class="modal-fundo">
+  <div class="modal-card">
+    <div class="modal-img" >
+        <img id="modal-img" src="" alt="">
+    </div>
+    <div class="modal-text">
+        <h2 id="modal-nome"></h2>
+        <p id="modal-desc"></p>
+        <p id="modal-preco-antigo"></p>
+        <p id="modal-preco"></p>
+        <button class="comprar">Comprar</button>
+        <button class="add" id="modal-btn">Adicionar ao Carrinho</button>
+    </div>
+    <span id="fechar">X</span>
+  </div>
+</div>
+
+
+
+    <!-- secões menu e carrinho responsivos -->
+    <div class="carrinho-lateral" id="carrinho">
+        <button class="fechar" onclick="fecharCarrinho()">X</button>
+        <h2>Meu Carrinho</h2>
+
+        <div id="itens-carrinho"></div>
+
+        <div class="total" id="total">Total:</div>
+
+        <div class="botoes">
+
+            <button class="finalizar" onclick="finalizar()">Finalizar Compra</button>
+
+            <button class="remove" id="limpar" onclick="limparCarrinho()">Limpar Carrinho</button>
+        </div>
+
+    </div>
+
+    <div class="fundo-cep" id="fundo-cep">
+        <div class="card-cep">
+            <button class="botao-fechar-cep" onclick="fecharCep()">X</button>
+            <div class="form-cep" action="">
+                <h2>Sua localizacão</h2>
+                <!-- <label for="">Informe seu Cep</label> -->
+                <input type="number" placeholder="Qual seu cep?" id="txt-cep">
+                <button class="botao-buscar-cep" onclick="buscarCep()">Buscar</button>
+                <div id="res" style="padding: 10px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- secao login -->
+    <div class="card-login" id="card-login">
+        <div class="cont-login">
+            <button onclick="fecharLogin()" class="botao-fechar-login">X</button>
+            <div class="form-log">
+                <h2>Entrar</h2>
+                <label for="">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu email">
+                <label for="">Senha</label>
+                <input type="password" name="senha" id="senha" placeholder="Digite sua Senha">
+                <button class="botao-entrar">Entrar</button>
+                <a href="">Não tem Cadastro?</a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <nav class="nav">
+            <a href="">Home</a>
+            <a href="">produtos</a>
+            <a href="">Sobre Nós</a>
+        </nav>
+
+        <p>© 2025 Senna Dev - Todos os direitos reservados.</p>
+
+    </footer>
+
+
+    <script src="../script.js"></script>
+    <script src="../api.js"></script>
+</body>
+</html>

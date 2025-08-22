@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faixa de Descontos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Faixa fixa no topo */
+    .faixa-descontos {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background: #ff3131; /* vermelho promo */
+      color: white;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      z-index: 1000;
+    }
+
+    /* Texto rolando */
+    .faixa-descontos span {
+      white-space: nowrap;
+      display: inline-block;
+      padding-left: 100%;
+      animation: deslizar 12s linear infinite;
+      font-weight: bold;
+    }
+
+    /* Animação */
+    @keyframes deslizar {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Exemplo de header para mostrar abaixo da faixa */
+    header {
+      margin-top: 40px; /* espaço por causa da faixa */
+      background: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Faixa de descontos -->
+  <div class="faixa-descontos">
+    <span>🔥 SUPER PROMOÇÃO: Frete grátis acima de R$199 | 20% OFF em Smartwatches | Aproveite hoje! 🔥</span>
+  </div>
+
+  <!-- Header normal -->
+  <header>
+    <h1>Minha Loja</h1>
+    <p>Bem-vindo ao site!</p>
+  </header>
+
+</body>
+</html>

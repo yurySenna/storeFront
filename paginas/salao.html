@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <title>Salão</title>
+</head>
+
+<body>
+    <div class="faixa-descontos">
+    <span>🔥 SUPER PROMOÇÃO: Frete grátis acima de R$199 | 20% OFF em Smartwatches | Aproveite hoje! 🔥</span>
+  </div>
+    <header>
+        <div class="cabecalho">
+            <div class="menu-amb">
+                <button onclick="mostrarMenu()">☰</button>
+            </div>
+            <div class="pesquisa">
+                <input type="text" name="" id="searchInput" placeholder="O que você procura?">
+                <button class="lupa">
+                    <img src="img/lup.png" alt="">
+                </button>
+            </div>
+
+            <div class=" logo">
+                    <!-- <h1>Senna Store</1> -->
+                    <img src="img/log-sen1.png" alt="" width="100px">
+            </div>
+
+            <div class="cep">
+                <img src="img/pin.png" alt="">
+                <p>Informe seu Cep</p>
+                <button onclick="mostrarCep()"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#000">
+                        <path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z" />
+                    </svg></button>
+            </div>
+            <div class="login">
+                <img src="img/user1.png" alt="">
+                <p>Entrar</p>
+                <button onclick="abrirLogin()"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#000">
+                        <path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z" />
+                    </svg></button>
+
+            </div>
+
+            <div class="carrinho">
+                <button class="botao-carrinho" onclick="abrirCarrinho()"><img src="img/carrinho.png" alt=""
+                        class="img-icon"></button>
+                <div class="contador" id="contador-carrinho">0</div>
+            </div>
+
+        </div>
+
+
+    </header>
+    <main>
+        <div class="secao-busca" id="secao-busca"></div>
+        <!-- menu lateral  -->
+         <div class="menu-lateral" id="menu-lateral">
+            <div class="topo-menu"><a href="index.html">Pagina Inicial</a>
+
+                <button class="fechar-menu" onclick="fecharMenu()">X</button>
+            </div>
+
+            <div class="btn-nav-menu" id="btn-nav-menu">
+            
+            </div>
+            <div class="nav-menu" id="menu">
+                <hr>
+            </div>
+            <hr>
+            <span><strong>Navegue por Marcas</strong></span>
+            <div class="compre-marca" id="marca"></div>
+
+        </div>
+
+        <section class="grade">
+            <h2>Produtos Para Salão</h2>
+            <div class="secao-cards" id="secao-salao">
+                
+            </div>
+        </section>
+        <section class="grade">
+            <h2>Produtos mais vendidos</h2>
+             <div class="secao-cards" id="secao-maisVendidos">
+                
+            </div>
+        </section>
+        <section class="grade">
+            <h2>Tv e Video</h2>
+            <div class="secao-cards" id="secao-tvs">
+                
+                </div>
+        </section>
+
+
+        </div>
+    </main>
+    <!-- secões menu e carrinho responsivos -->
+    <div class="carrinho-lateral" id="carrinho">
+        <button class="fechar" onclick="fecharCarrinho()">X</button>
+        <h2>Meu Carrinho</h2>
+
+        <div id="itens-carrinho"></div>
+
+        <div class="total" id="total">Total:</div>
+
+        <div class="botoes">
+
+            <button class="finalizar" onclick="finalizar()">Finalizar Compra</button>
+
+            <button class="remove" id="limpar" onclick="limparCarrinho()">Limpar Carrinho</button>
+        </div>
+
+    </div>
+
+    <div class="fundo-cep" id="fundo-cep">
+        <div class="card-cep">
+            <button class="botao-fechar-cep" onclick="fecharCep()">X</button>
+            <div class="form-cep" action="">
+                <h2>Sua localizacão</h2>
+                <!-- <label for="">Informe seu Cep</label> -->
+                <input type="number" placeholder="Qual seu cep?" id="txt-cep">
+                <button class="botao-buscar-cep" onclick="buscarCep()">Buscar</button>
+                <div id="res" style="padding: 10px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- secao login -->
+    <div class="card-login" id="card-login">
+        <div class="cont-login">
+            <button onclick="fecharLogin()" class="botao-fechar-login">X</button>
+            <div class="form-log">
+                <h2>Entrar</h2>
+                <label for="">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu email">
+                <label for="">Senha</label>
+                <input type="password" name="senha" id="senha" placeholder="Digite sua Senha">
+                <button class="botao-entrar">Entrar</button>
+                <a href="">Não tem Cadastro?</a>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="">produtos</a>
+            <a href="">Sobre Nós</a>
+        </nav>
+
+        <p>© 2025 Senna Dev - Todos os direitos reservados.</p>
+
+    </footer>
+
+</body>
+<script src="../script.js"></script>
+<script src="../api.js"></script>
+
+</html>
