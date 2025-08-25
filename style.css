@@ -708,7 +708,6 @@ button {
     a {
         font-size: 15px;
         color: #111111;
-
     }
 
     .topo-menu {
@@ -775,7 +774,7 @@ button {
     cursor: pointer;
     transition: background 0.3s;
     text-decoration: none;
-    color: black;
+    
 
 }
 
@@ -814,6 +813,8 @@ button {
     font-size: 14px;
     font-weight: lighter;
     font-family: sans-serif;
+    color: black;
+    
 
 }
 
@@ -1232,7 +1233,7 @@ footer {
         }
     }
     .card-login {
-        align-items: end;
+        align-items: center;
     }
 
     .cep {
@@ -1324,13 +1325,16 @@ footer {
     .modal-card {
         flex-direction: column;
         align-items: center;
+        height: 540px;
+        
+        
         
 
     }
 
     .botao-fechar {
         position: absolute;
-        top: 20px;
+        top: 125px;
         right: 40px;
         font-size: 16px;
         font-weight: bold;
@@ -1345,13 +1349,15 @@ footer {
 
         img {
             width: 170px;
+            object-fit: cover;
         }
     }
 
     .modal-text {
-        padding: 20px;
+        padding: 25px;
         justify-content: center;
         border-top: 0.5px solid rgba(0, 0, 0, 0.185);
+        
         
         h2 {
             font-size: 20px;
