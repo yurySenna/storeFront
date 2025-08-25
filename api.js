@@ -25,8 +25,8 @@ async function carregarSecao(categorias, containerId) {
                     </div>
                     <div class="texto-produto">
                         <h2>${produto.nome}</h2>
-                        <p>${produto.descricao}</p>
-                        <p>De <s>R$ ${precoantigo}</s></p>
+                        <p class="descricao">${produto.descricao}</p>
+                        <p class="preco-anti">De <s>R$ ${precoantigo}</s></p>
                         <span><strong>Por R$ ${precoatual}</strong></span>
                         <p class="cupom">Cupom R$ 10 OFF</p>
                     </div>
@@ -61,6 +61,7 @@ const searchContainer = document.getElementById('secao-busca'); // crie uma seç
 
 async function buscarProdutos(termo) {
   try {
+
     const resposta = await fetch(`https://storebackend-5dsn.onrender.com/buscar?q=${encodeURIComponent(termo)}`);
     const produtos = await resposta.json();
 
