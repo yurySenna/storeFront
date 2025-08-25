@@ -1,51 +1,3 @@
-/* body {
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
-    text-align: center;
-}
-
-.secao-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    padding: 20px;
-}
-
-.card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    width: 220px;
-    padding: 15px;
-    transition: transform 0.2s ease;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    max-width: 90%;
-    border-radius: 5px;
-}
-
-.texto-produto h2 {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.texto-produto p {
-    font-size: 14px;
-    color: #666;
-}
-
-.texto-produto strong {
-    color: green;
-    font-size: 16px;
-} */
-
-
 * {
     margin: 0;
     padding: 0;
@@ -83,7 +35,7 @@ body {
     white-space: nowrap;
     display: inline-block;
     padding-left: 100%;
-    animation: deslizar 15s linear infinite;
+    animation: deslizar 20s linear infinite;
     font-weight: bold;
     font-family: Arial, sans-serif;
     font-size: 14px;
@@ -115,8 +67,6 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-
-
 }
 
 
@@ -161,9 +111,14 @@ button {
         border-radius: 60px;
         padding: 10px;
         width: 100%;
-        border: none;
-
+       border: 1px solid #ccc;
+        outline: none;
+        transition: border-color 0.3s;
     }
+
+   .pesquisa > input:focus {
+      border-color: #6c63ff;
+    }    
 
 
     .lupa {
@@ -189,10 +144,6 @@ button {
 
     flex-flow: row wrap;
     background-color: #f1f1f1c7;
-
-
-
-
 }
 
 .logo {
@@ -529,17 +480,15 @@ button {
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     align-items: center;
     background-color: #ffffff;
     width: 220px;
-    height: 330px;
-    padding: 20px 5px 20px 5px;
+    height: 350px;
+    padding: 10px 5px 10px 5px;
     border-radius: 10px;
-    text-align: center;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 10px;
 
 }
 
@@ -550,19 +499,19 @@ button {
 }
 
 .caixa-img {
-    height: 200px;
+    height: 100%;
     width: 100%;
-    /* background-color: rgba(220, 20, 60, 0.432); */
-
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
-.caixa-img>img {
-    width: 90px;
+.caixa-img > img {
+    width: 120px;
     object-fit: cover;
     margin-top: 5px;
     border-radius: 5px;
     background: none;
-
 
 }
 
@@ -570,88 +519,54 @@ button {
 .texto-produto {
     display: flex;
     flex-direction: column;
-
     padding: 10px;
-    align-items: center;
+    /* align-items: center; */
     height: 100%;
-    font-family: 'Poppins', sans-serif;
-
+    margin-top: 10px;
+    
 
 
 }
 
-.texto-produto>h2 {
-    font-size: 15px;
+.texto-produto > h2 {
+    font-size: 16px;
     color: #333;
-    padding-bottom: 5px;
-
+    margin-bottom: 10px;
 
 }
 
 .texto-produto>p {
     font-size: 12px;
-    color: rgba(0, 0, 0, 0.822);
+    color: rgba(0, 0, 0, 0.89);
     /* font-weight: bolder; */
-    padding-bottom: 5px;
-    font-family: 'Poppins', sans-serif;
-    margin-top: 5px;
-
-
+    /* font-family: 'Poppins', sans-serif; */
+    margin-bottom: 8px;
 
 }
 
 .texto-produto span {
     font-size: 16px;
-    color: #111111d2;
+    color: #28a745;
     margin-bottom: 10px;
-
-
 }
 
-
-.texto-produto button {
-    background-color: #6f6fa7;
-    /* background-color: #007bff; */
-    color: #fff;
-    font-weight: bold;
-    width: 140px;
-    padding: 8px;
-    border: none;
-    border-radius: 8px;
-    font-size: 13px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.cupom {
+    background-color: #3cfc8f;
+    font-size: 10px;
+    font-weight: bolder;
+    padding: 3px;
+    border-radius: 5px;
     margin-top: auto;
-
+    text-align: center;
 
 
 
 
 }
+
 
 .texto-produto button:hover {
     background-color: #8989afd3;
-}
-
-footer {
-    background-color: #c2c2c2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-    flex-wrap: wrap;
-
-
-    a {
-        padding: 8px;
-        text-decoration: none;
-        color: #111111;
-    }
-
-
 }
 
 /* carrinho compras  */
@@ -659,7 +574,8 @@ footer {
     position: absolute;
     top: -10px;
     right: -10px;
-    background: rgba(93, 111, 212, 0.719);
+    /* background: rgba(93, 111, 212, 0.719); */
+    background-color: rgba(255, 0, 0, 0.616);
     color: white;
     border-radius: 50%;
     font-size: 12px;
@@ -679,10 +595,9 @@ footer {
     background: rgb(214, 236, 243);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     transition: right 0.3s ease;
-
     z-index: 1000;
-
     overflow-y: scroll;
+    border-radius: 5px;
 }
 
 .carrinho-lateral.aberto {
@@ -697,7 +612,7 @@ footer {
     padding: 8px;
 
     width: 100vw;
-    background-color: #6f6f8b;
+    background-color: #848d96;
     color: white;
     border-bottom: 1px solid black;
 
@@ -783,8 +698,6 @@ footer {
     width: 280px;
     height: 100%;
     background: #e2e0e0;
-    /* background: #e2e0e0f8; */
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     transition: left 0.3s ease;
     z-index: 1000;
     border-radius: 5px;
@@ -799,7 +712,8 @@ footer {
     }
 
     .topo-menu {
-        background-color: #6f6f8b;
+        /* background-color: #6f6f8b; */
+        background-color: #848d96;
         padding: 10px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.884);
         margin-bottom: 10px;
@@ -1016,13 +930,14 @@ footer {
 
 
 }
-
 /* secao login */
 .botao-fechar-login {
     float: right;
     font-size: 20px;
     top: 0;
     font-weight: 600;
+    padding: 10px;
+
 
 }
 
@@ -1040,6 +955,7 @@ footer {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
+    
 
 }
 
@@ -1054,54 +970,83 @@ footer {
     opacity: 1;
 }
 
-.cont-login {
-    background: white;
-    padding: 10px;
-    border-radius: 10px;
-    width: 300px;
-    height: 250px;
-    transform: scale(0);
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+.caixa-form {
+     padding: 40px;
 
 }
-
-.form-log {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-
-    h2 {
-        margin-bottom: 10px;
+.login-container {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      width: 350px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+      margin-top: 100px;
     }
 
-    input {
-        height: 30px;
-        padding: 5px;
-        border-radius: 5px;
-        margin-bottom: 10px;
-        /* border: none; */
-
-
+    .login-container h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
     }
-}
 
-.botao-entrar {
-    width: 100px;
-    height: 30px;
-    background-color: darkgreen;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    color: white;
+    .input-group {
+      margin-bottom: 15px;
+      text-align: left;
+    }
 
-}
+    .input-group label {
+      font-size: 14px;
+      color: #555;
+      display: block;
+      margin-bottom: 5px;
+    }
 
-.botao-entrar:hover {
-    cursor: pointer;
-    background-color: rgba(0, 100, 0, 0.582);
-}
+    .input-group input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .input-group input:focus {
+      border-color: #6c63ff;
+    }
+
+    .btn-input {
+      width: 100%;
+      padding: 12px;
+      background: #6c63ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #5548c8;
+    }
+
+    .links {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .links a {
+      color: #6c63ff;
+      text-decoration: none;
+      margin: 0 5px;
+      transition: color 0.3s;
+    }
+
+    .links a:hover {
+      color: #5548c8;
+    }
 
 .modal-fundo {
     display: none;
@@ -1112,47 +1057,52 @@ footer {
     height: 100%;
     background: rgba(0, 0, 0, 0.473);
     z-index: 2000;
-    margin-top: 105px;
     text-align: center;
-    padding: 40px;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-card {
     background: #fff;
-    padding: 10px;
     border-radius: 10px;
-    width: 100%;
-    height: 400px;
+    width: 80%;
+    height: auto;
     text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-align: center;
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-
-    span {
-        right: 0;
-        top: 0;
-        font-size: 20px;
-        font-weight: bolder;
-        cursor: pointer;
-    }
-
+    
 
 }
 
+.botao-fechar {
+    top: 0;
+    font-size: 17px;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-right: 8px;
+    padding: 8px;
+    
+
+}
+
+
 .modal-img {
-    width: 100%;
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
+    padding: 40px;
 
-    
+
+
 
     img {
-        width: 300px;
-        
+        width: 330px;
+        max-width: 100%;
+        object-fit: cover;
 
     }
 
@@ -1160,50 +1110,95 @@ footer {
 }
 
 .modal-text {
-    display: flex;
+    padding: 40px;
     flex-direction: column;
-    padding: 30px;
-    text-align: center;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-
-
-
-
-
+    text-align: start;
+    flex: 1;
+    border-left: 0.5px solid rgba(0, 0, 0, 0.185);
+    
     h2 {
         font-size: 30px;
+        margin-bottom: 15px;
+        
     }
 
     p {
-        font-size: 20px;
+        /* font-family: 'Open Sans', sans-serif; */
+        margin-bottom: 10px;
+        font-size: 17px;
+        
+
+    }
+
+    span {
+        color: #007bff;
+        /* font-weight: lighter; */
+        display: block;
+        font-size: 0.9rem;
+        /* color: #555; */
+    }
+
+    .preco {
+        font-size: 1.3rem;
+        color: #28a745;
+        font-weight: bold;
+        margin-bottom: 10px;
+
     }
 
     .comprar {
         width: 300px;
-        height: 40px;
+        height: 45px;
         border-radius: 10px;
         border: none;
-        background-color: rgb(76, 168, 76);
+        background-color: #28a745;
         color: #fff;
         font-size: 18px;
+        margin-top: 20px;
+
 
     }
 
     .add {
         width: 300px;
-        height: 40px;
+        height: 45px;
         border-radius: 10px;
         border: none;
-        background-color: rgb(204, 115, 115);
+        background-color: #007bff;
         color: #fff;
         font-size: 18px;
+        margin-top: 16px;
+    
+    }
+
+    .comprar:hover,
+    .add:hover {
+        opacity: 0.9;
+
     }
 
 }
 
+footer {
+    background-color: #c2c2c2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
+
+
+    a {
+        padding: 8px;
+        text-decoration: none;
+        color: #111111;
+    }
+
+
+}
 
 @media screen and (max-width: 768px) {
     .pesquisa {
@@ -1236,6 +1231,9 @@ footer {
             font-size: 13px;
         }
     }
+    .card-login {
+        align-items: end;
+    }
 
     .cep {
         grid-row: 3 / 4;
@@ -1244,11 +1242,7 @@ footer {
         p {
             font-size: 13px;
         }
-
-
     }
-
-
 
     .banner {
         flex-direction: column-reverse;
@@ -1324,45 +1318,63 @@ footer {
         flex-direction: row;
         width: 420px;
         height: 210px;
-        align-items: center;
-        justify-content: center;
-
-        span {
-            margin-bottom: 5px;
-
-        }
-
-        button {
-            width: 180px;
-
-
-
-        }
-    }
-
-    .caixa-img {
-        margin-top: 20px;
-        width: 110px;
-        padding: 10px;
-
-
-        img {
-            width: 100px;
-
-        }
-
 
     }
 
-
-    .texto-produto {
+    .modal-card {
         flex-direction: column;
         align-items: center;
+        
 
+    }
 
-        h2 {
-            padding-bottom: 2px;
+    .botao-fechar {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        
+    }
+
+    .modal-img {
+        height: 100%;
+        padding: 10px;
+        object-fit: cover;
+
+        img {
+            width: 170px;
         }
+    }
+
+    .modal-text {
+        padding: 20px;
+        justify-content: center;
+        border-top: 0.5px solid rgba(0, 0, 0, 0.185);
+        
+        h2 {
+            font-size: 20px;
+            /* margin-bottom: 0; */
+        }
+
+        p {
+            font-size: 14px;
+            /* margin-bottom: 0; */
+        }
+
+        .preco {
+            font-size: 16px;
+            /* margin-bottom: 0; */
+        }
+        .add {
+            margin-top: 8px;
+        }
+
+        span {
+            font-size: 12px;
+        }
+
     }
 
 }

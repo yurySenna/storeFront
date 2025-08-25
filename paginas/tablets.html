@@ -64,7 +64,7 @@
         <div class="secao-busca" id="secao-busca"></div>
         <!-- menu lateral  -->
          <div class="menu-lateral" id="menu-lateral">
-            <div class="topo-menu"><a href="index.html">Pagina Inicial</a>
+            <div class="topo-menu"><a href="../index.html">Pagina Inicial</a>
 
                 <button class="fechar-menu" onclick="fecharMenu()">X</button>
             </div>
@@ -90,68 +90,8 @@
         </section>
         <section class="grade">
             <h2>Produtos mais vendidos</h2>
-             <div class="secao-cards">
-                <div class="card">
-                    <div class="caixa-img">
-                        <img src="img/tvs/smart-tv85.webp" alt="smart tv">
-                    </div>
-                    <div class="texto-produto">
-                        <h2>Smart TV 85"</h2>
-                        <p>4K UHD QLED Mini LED TCL 85C755 120Hz Wi-Fi Bluetooth 4 HDMI 2 USB</p>
-                        <p>De <s>R$ 12.299,00</s> Por</p>
-                        <span><strong>R$ 11.679,00</strong></span>
-                        <button onclick="adicionarAoCarrinho('Smart TV 85', 11.679)">Compre Agora</button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="caixa-img">
-                        <img src="img/smartphones/iphoneMeiaNoite.png" alt="iphone">
-                    </div>
-                    <div class="texto-produto">
-                        <h2>Apple iPhone 14</h2>
-                        <p>128GB Meia-Noite,Tela de 6,1" 5G</p>
-                        <p>de <s>R$ 4.899,00</s> Por</p>
-                        <span><strong>R$ 3.999</strong></span>
-                        <button onclick="adicionarAoCarrinho('Apple iPhone 14', 3.999)">Comprar</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="caixa-img">
-                        <img src="img/tablets/tab-A9.webp" alt="tablet samsung">
-                    </div>
-                    <div class="texto-produto">
-                        <h2>Tablet Samsung</h2>
-                        <p>Galaxy Tab A9, tela de 8,7", 64 GB, 4 GB de RAM, cor cinza</p>
-                        <p>de <s>R$ 1.699,00</s> Por</p>
-                        <span><strong>R$ 1.199,00</strong></span>
-                        <button onclick="adicionarAoCarrinho('Tablet Samsung', 1.199)">Comprar</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="caixa-img">
-                        <img src="img/notebooks/dell2.png" alt="Notebook dell">
-                    </div>
-                    <div class="texto-produto">
-                        <h2>Dell Inspiron 15 </h2>
-                        <p>Notebook Intel Core i5 16GB RAM SSD 1TB 15,6" Windows 11 12MB</p>
-                        <p>De <s>R$ 4.599,00</s> Por</p>
-                        <span><strong>R$ 4.139,00</strong></span>
-                        <button onclick="adicionarAoCarrinho('Notebook Dell', 4.139)">Comprar</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="caixa-img">
-                        <img src="img/smartphones/iphon-rosa.webp" alt="iphone 16">
-                    </div>
-                    <div class="texto-produto">
-                        <h2>Apple iPhone 16</h2>
-                        <p>Camra Dupla de 48MP 256GB, Rosa 6,1" iOS 5G</p>
-                        <p>de <s>R$ 7.899,00</s> Por</p>
-                        <span><strong>R$ 6.999,00</strong></span>
-                        <button onclick="adicionarAoCarrinho('Iphone 16 Rosa', 6.999)">Ver Ofertas</button>
-                    </div>
-                </div>
+             <div class="secao-cards" id="secao-maisVendidos">
+                
             </div>
         </section>
         <section class="grade">
@@ -164,6 +104,27 @@
 
         </div>
     </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal-fundo">
+        <div class="modal-card">
+            <div class="modal-img">
+                <img id="modal-img" src="" alt="">
+            </div>
+            <div class="modal-text">
+                <h2 id="modal-nome"></h2>
+                <p id="modal-desc"></p>
+                <p id="modal-preco-antigo"></p>
+                <p class="preco" id="modal-preco"></p>
+                <span>(10% de desconto no pix)</span>
+
+                <button class="comprar">Comprar</button>
+                <button class="add" id="modal-btn">Adicionar ao Carrinho</button>
+
+            </div>
+            <span class="botao-fechar" id="fechar">X</span>
+        </div>
+    </div>
     <!-- secões menu e carrinho responsivos -->
     <div class="carrinho-lateral" id="carrinho">
         <button class="fechar" onclick="fecharCarrinho()">X</button>
@@ -195,19 +156,27 @@
         </div>
     </div>
 
-    <!-- secao login -->
+     <!-- secao login -->
     <div class="card-login" id="card-login">
-        <div class="cont-login">
+        <div class="login-container" id="card-login">
             <button onclick="fecharLogin()" class="botao-fechar-login">X</button>
-            <div class="form-log">
-                <h2>Entrar</h2>
-                <label for="">E-mail</label>
-                <input type="email" name="email" id="email" placeholder="Digite seu email">
-                <label for="">Senha</label>
-                <input type="password" name="senha" id="senha" placeholder="Digite sua Senha">
-                <button class="botao-entrar">Entrar</button>
-                <a href="">Não tem Cadastro?</a>
-
+            <div class="caixa-form">
+                <h1>Entrar na Loja</h1>
+                <form>
+                    <div class="input-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="senha" placeholder="Digite sua senha" required>
+                    </div>
+                    <button type="submit" class="btn-input">Entrar</button>
+                    <div class="links">
+                        <a href="#">Esqueceu a senha?</a> |
+                        <a href="#">Criar conta</a>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

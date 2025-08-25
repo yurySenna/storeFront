@@ -28,11 +28,7 @@ async function carregarSecao(categorias, containerId) {
                         <p>${produto.descricao}</p>
                         <p>De <s>R$ ${precoantigo}</s></p>
                         <span><strong>Por R$ ${precoatual}</strong></span>
-                        <button onclick="adicionarAoCarrinho('${produto.nome}', '${precoatual}')">
-                             Compre Agora
-                         </button>
-                         
-                        
+                        <p class="cupom">Cupom R$ 10 OFF</p>
                     </div>
                     
                 </div>

@@ -103,6 +103,27 @@
 
         </div>
     </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal-fundo">
+        <div class="modal-card">
+            <div class="modal-img">
+                <img id="modal-img" src="" alt="">
+            </div>
+            <div class="modal-text">
+                <h2 id="modal-nome"></h2>
+                <p id="modal-desc"></p>
+                <p id="modal-preco-antigo"></p>
+                <p class="preco" id="modal-preco"></p>
+                <span>(10% de desconto no pix)</span>
+
+                <button class="comprar">Comprar</button>
+                <button class="add" id="modal-btn">Adicionar ao Carrinho</button>
+
+            </div>
+            <span class="botao-fechar" id="fechar">X</span>
+        </div>
+    </div>
     <!-- secões menu e carrinho responsivos -->
     <div class="carrinho-lateral" id="carrinho">
         <button class="fechar" onclick="fecharCarrinho()">X</button>
@@ -134,38 +155,31 @@
         </div>
     </div>
 
-    <!-- secao login -->
+     <!-- secao login -->
     <div class="card-login" id="card-login">
-        <div class="cont-login">
+        <div class="login-container" id="card-login">
             <button onclick="fecharLogin()" class="botao-fechar-login">X</button>
-            <div class="form-log">
-                <h2>Entrar</h2>
-                <label for="">E-mail</label>
-                <input type="email" name="email" id="email" placeholder="Digite seu email">
-                <label for="">Senha</label>
-                <input type="password" name="senha" id="senha" placeholder="Digite sua Senha">
-                <button class="botao-entrar">Entrar</button>
-                <a href="">Não tem Cadastro?</a>
-
+            <div class="caixa-form">
+                <h1>Entrar na Loja</h1>
+                <form>
+                    <div class="input-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="senha" placeholder="Digite sua senha" required>
+                    </div>
+                    <button type="submit" class="btn-input">Entrar</button>
+                    <div class="links">
+                        <a href="#">Esqueceu a senha?</a> |
+                        <a href="#">Criar conta</a>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
-     <!-- Modal -->
-<div id="modal" class="modal-fundo">
-  <div class="modal-card">
-    <img class="modal-img" id="modal-img" src="" alt="">
-    <div class="modal-text">
-        <span id="fechar">X</span>
-        <h2 id="modal-nome"></h2>
-        <p id="modal-desc"></p>
-        <p id="modal-preco-antigo"></p>
-        <p id="modal-preco"></p>
-        <button class="comprar">Comprar</button>
-        <button class="add" id="modal-btn">Adicionar ao Carrinho</button>
-    </div>
-  </div>
-</div>
 
     <footer>
         <nav class="nav">

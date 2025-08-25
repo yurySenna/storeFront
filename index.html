@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +13,8 @@
 
 <body>
     <div class="faixa-descontos">
-    <span>🔥 SUPER PROMOÇÃO: Frete grátis acima de R$199 | 20% OFF em Smartwatches | Aproveite hoje! 🔥</span>
-  </div>
+        <span>🔥 SUPER PROMOÇÃO: Frete grátis acima de R$199 | 20% OFF em Smartwatches | Aproveite hoje! 🔥</span>
+    </div>
     <header>
         <div class="cabecalho">
             <div class="menu-amb">
@@ -50,7 +50,8 @@
             </div>
 
             <div class="carrinho">
-                <button class="botao-carrinho" onclick="abrirCarrinho()"><img src="img/carrinho.png" alt="carrinho compras" class="img-icon"></button>
+                <button class="botao-carrinho" onclick="abrirCarrinho()"><img src="img/carrinho.png"
+                        alt="carrinho compras" class="img-icon"></button>
                 <div class="contador" id="contador-carrinho">0</div>
             </div>
 
@@ -59,7 +60,7 @@
 
     </header>
     <main>
-         
+
         <!-- menu lateral  -->
         <div class="menu-lateral" id="menu-lateral">
             <div class="topo-menu"><a href="">Faça seu login</a>
@@ -68,7 +69,7 @@
             </div>
 
             <div class="btn-nav-menu" id="btn-nav-menu">
-            
+
             </div>
             <div class="nav-menu" id="menu">
                 <hr>
@@ -210,103 +211,106 @@
         <section class="grade">
             <h2>Navegue por Categorias</h2>
             <div class="nav-categorias">
-                <a href="smartphones.html">
+                <a href="paginas/smartphones.html">
                     <img src="img/smartphones/celulares.webp" alt="">
                 </a>
-                <a href="eletrodomesticos.html">
+                <a href="paginas/eletrodomesticos.html">
                     <img src="img/eletrodomesticos/eletro.webp" alt="">
                 </a>
-                <a href="games.html">
+                <a href="paginas/games.html">
                     <img src="img/games/games.webp" alt="">
                 </a>
-                <a href="audio.html">
+                <a href="paginas/audio.html">
                     <img src="img/audio.webp" alt="">
                 </a>
-                <a href="smartwatch.html">
+                <a href="paginas/smartwatch.html">
                     <img src="img/smartwatches.webp" alt="">
                 </a>
-                <a href="">
+                <a href="paginas/salao.html">
                     <img src="img/beleza.webp" alt="">
                 </a>
-                <a href="tv-video.html">
+                <a href="paginas/tv-video.html">
                     <img src="img/tvs/tvs.webp" alt="">
                 </a>
                 <a href="informatica.html">
                     <img src="img/info.webp" alt="">
                 </a>
-                <a href="">
+                <a href="paginas/eletroportateis">
                     <img src="img/eletroport.webp" alt="">
                 </a>
             </div>
 
 
         </section>
-    
+
         <section class="grade">
             <section class="propagandas">
-            <div class="banner-ofertas">
-                <h2>🔥 Super Ofertas da Semana!</h2>
-                <p>Descontos imperdíveis em celulares, notebooks e smart TVs</p>
-            </div>
+                <div class="banner-ofertas">
+                    <h2>🔥 Super Ofertas da Semana!</h2>
+                    <p>Descontos imperdíveis em celulares, notebooks e smart TVs</p>
+                </div>
             </section>
             <div class="secao-cards" id="secao-promocao">
-                
+
             </div>
         </section>
 
         <section class="grade">
             <h2>Smartphones</h2>
             <div class="secao-cards" id="secao-smartphones">
-                
+
             </div>
         </section>
         <section class="grade">
             <h2>Notebooks</h2>
             <div class="secao-cards" id="secao-notebooks">
-             
-            </div>   
+
+            </div>
         </section>
 
         <section class="grade">
             <h2>Tablets</h2>
             <div class="secao-cards" id="secao-tablets">
-                
+
             </div>
         </section>
 
-         <section class="grade">
+        <section class="grade">
             <h2>Tv e Video</h2>
             <div class="secao-cards" id="secao-tvs">
 
             </div>
-                
+
         </section>
 
         <section class="grade">
             <h2>Eletrodomésticos</h2>
             <div class="secao-cards" id="secao-eletro">
-                
+
             </div>
         </section>
     </main>
 
     <!-- Modal -->
-<div id="modal" class="modal-fundo">
-  <div class="modal-card">
-    <div class="modal-img" >
-        <img id="modal-img" src="" alt="">
+    <div id="modal" class="modal-fundo">
+        <div class="modal-card">
+            <div class="modal-img">
+                <img id="modal-img" src="" alt="">
+            </div>
+            <div class="modal-text">
+                <h2 id="modal-nome"></h2>
+                <p id="modal-desc"></p>
+                <p id="modal-preco-antigo"></p>
+                <p class="preco" id="modal-preco"></p>
+                <span>(10% de desconto no pix)</span>
+
+                <button class="comprar">Comprar</button>
+                <button class="add" id="modal-btn">Adicionar ao Carrinho</button>
+
+            </div>
+            <span class="botao-fechar" id="fechar">X</span>
+        </div>
     </div>
-    <div class="modal-text">
-        <h2 id="modal-nome"></h2>
-        <p id="modal-desc"></p>
-        <p id="modal-preco-antigo"></p>
-        <p id="modal-preco"></p>
-        <button class="comprar">Comprar</button>
-        <button class="add" id="modal-btn">Adicionar ao Carrinho</button>
-    </div>
-    <span id="fechar">X</span>
-  </div>
-</div>
 
 
 
@@ -343,21 +347,28 @@
 
     <!-- secao login -->
     <div class="card-login" id="card-login">
-        <div class="cont-login">
+        <div class="login-container" id="card-login">
             <button onclick="fecharLogin()" class="botao-fechar-login">X</button>
-            <div class="form-log">
-                <h2>Entrar</h2>
-                <label for="">E-mail</label>
-                <input type="email" name="email" id="email" placeholder="Digite seu email">
-                <label for="">Senha</label>
-                <input type="password" name="senha" id="senha" placeholder="Digite sua Senha">
-                <button class="botao-entrar">Entrar</button>
-                <a href="">Não tem Cadastro?</a>
-
+            <div class="caixa-form">
+                <h1>Entrar na Loja</h1>
+                <form>
+                    <div class="input-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="senha" placeholder="Digite sua senha" required>
+                    </div>
+                    <button type="submit" class="btn-input">Entrar</button>
+                    <div class="links">
+                        <a href="#">Esqueceu a senha?</a> |
+                        <a href="#">Criar conta</a>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-
 
     <footer>
         <nav class="nav">
@@ -371,7 +382,8 @@
     </footer>
 
 
-    <script src="../script.js"></script>
-    <script src="../api.js"></script>
+    <script src="script.js"></script>
+    <script src="api.js"></script>
 </body>
+
 </html>

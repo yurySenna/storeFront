@@ -4,15 +4,15 @@ function mostrarMenu() {
 
    const botoes = [
   { nome: 'Smartphones', link: 'paginas/smartphones.html' },
-  { nome: 'Tablets', link: 'paginas/tablets.html' },
-  { nome: 'Notebooks', link: 'paginas/notebooks.html' },
-  { nome: 'Games', link: 'paginas/games.html' },
-  { nome: 'Drones', link: 'paginas/drones.html' },
-  { nome: 'AirPods', link: 'paginas/airpods.html' },
-  { nome: 'Salão', link: 'paginas/salao.html' },
-  { nome: 'TVs', link: 'paginas/tv-video.html' },
-  { nome: 'Smartwatches', link: 'paginas/smartwatch.html' },
-  { nome: 'Áudio', link: 'paginas/audio.html' }
+  { nome: 'Tablets', link: '/paginas/tablets.html' },
+  { nome: 'Notebooks', link: '/paginas/notebooks.html' },
+  { nome: 'Games', link: '/paginas/games.html' },
+  { nome: 'Drones', link: '/paginas/drones.html' },
+  { nome: 'AirPods', link: '/paginas/airpods.html' },
+  { nome: 'Salão', link: '/paginas/salao.html' },
+  { nome: 'TVs', link: '/paginas/tv-video.html' },
+  { nome: 'Smartwatches', link: '/paginas/smartwatch.html' },
+  { nome: 'Áudio', link: '/paginas/audio.html' }
 ];
 
 // Pega o menu do HTML
@@ -31,17 +31,17 @@ botoes.forEach(i => {
 });
 
  const itemMenu = [
-  { nome: 'Smartphones', link: 'paginas/smartphones.html' },
-  { nome: 'Tablets', link: 'paginas/tablets.html' },
-  { nome: 'Notebooks', link: 'paginas/notebooks.html' },
-  { nome: 'Games', link: 'paginas/games.html' },
-  { nome: 'Informática', link: 'paginas/informatica.html' },
-  { nome: 'Drones', link: 'paginas/drones.html' },
-  { nome: 'Eletrodomésticos', link: 'paginas/eletrodomesticos.html' },
-  { nome: 'Salão', link: 'paginas/salao.html' },
-  { nome: 'Tv e Video', link: 'paginas/tv-video.html' },
-  { nome: 'Smartwatches', link: 'paginas/smartwatches.html' },
-  { nome: 'Áudio', link: 'paginas/audio.html' }
+  { nome: 'Smartphones', link: '/paginas/smartphones.html' },
+  { nome: 'Tablets', link: '/paginas/tablets.html' },
+  { nome: 'Notebooks', link: '/paginas/notebooks.html' },
+  { nome: 'Games', link: '/paginas/games.html' },
+  { nome: 'Informática', link: '/paginas/informatica.html' },
+  { nome: 'Drones', link: '/paginas/drones.html' },
+  { nome: 'Eletrodomésticos', link: '/paginas/eletrodomesticos.html' },
+  { nome: 'Salão', link: '/paginas/salao.html' },
+  { nome: 'Tv e Video', link: '/paginas/tv-video.html' },
+  { nome: 'Smartwatches', link: '/paginas/smartwatches.html' },
+  { nome: 'Áudio', link: '/paginas/audio.html' }
 ];
 
 

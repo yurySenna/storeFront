@@ -23,17 +23,17 @@
             <div class="pesquisa">
                  <input type="text" name="" id="searchInput" placeholder="O que você procura?">
                 <button class="lupa">
-                    <img src="img/lup.png" alt="" class=""">
+                    <img src="img/lup.png" alt="lupa pesquisa">
                 </button>
             </div>
 
             <div class=" logo">
                     <!-- <h1>Senna Store</1> -->
-                    <img src="img/log-sen1.png" alt="" width="100px">
+                    <img src="img/log-sen1.png" alt="logo" width="100px">
             </div>
 
             <div class="cep">
-                <img src="img/pin.png" alt="">
+                <img src="img/pin.png" alt="cep">
                 <p>Informe seu Cep</p>
                 <button onclick="mostrarCep()"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
                         viewBox="0 -960 960 960" width="24px" fill="#000">
@@ -41,7 +41,7 @@
                     </svg></button>
             </div>
             <div class="login">
-                <img src="img/user1.png" alt="">
+                <img src="img/user1.png" alt="login">
                 <p>Entrar</p>
                 <button onclick="abrirLogin()"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
                         viewBox="0 -960 960 960" width="24px" fill="#000">
@@ -64,7 +64,7 @@
         <div class="secao-busca" id="secao-busca"></div>
          <!-- menu lateral  -->
         <div class="menu-lateral" id="menu-lateral">
-            <div class="topo-menu"><a href="index.html">Pagina Inicial</a>
+            <div class="topo-menu"><a href="../index.html">Pagina Inicial</a>
 
                 <button class="fechar-menu" onclick="fecharMenu()">X</button>
             </div>
@@ -97,6 +97,27 @@
 
         </div>
     </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal-fundo">
+        <div class="modal-card">
+            <div class="modal-img">
+                <img id="modal-img" src="" alt="">
+            </div>
+            <div class="modal-text">
+                <h2 id="modal-nome"></h2>
+                <p id="modal-desc"></p>
+                <p id="modal-preco-antigo"></p>
+                <p class="preco" id="modal-preco"></p>
+                <span>(10% de desconto no pix)</span>
+
+                <button class="comprar">Comprar</button>
+                <button class="add" id="modal-btn">Adicionar ao Carrinho</button>
+
+            </div>
+            <span class="botao-fechar" id="fechar">X</span>
+        </div>
+    </div>
     <!-- secões menu e carrinho responsivos -->
     <div class="carrinho-lateral" id="carrinho">
         <button class="fechar" onclick="fecharCarrinho()">X</button>
@@ -128,19 +149,27 @@
         </div>
     </div>
 
-    <!-- secao login -->
+     <!-- secao login -->
     <div class="card-login" id="card-login">
-        <div class="cont-login">
+        <div class="login-container" id="card-login">
             <button onclick="fecharLogin()" class="botao-fechar-login">X</button>
-            <div class="form-log">
-                <h2>Entrar</h2>
-                <label for="">E-mail</label>
-                <input type="email" name="email" id="email" placeholder="Digite seu email">
-                <label for="">Senha</label>
-                <input type="password" name="senha" id="senha" placeholder="Digite sua Senha">
-                <button class="botao-entrar">Entrar</button>
-                <a href="">Não tem Cadastro?</a>
-
+            <div class="caixa-form">
+                <h1>Entrar na Loja</h1>
+                <form>
+                    <div class="input-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="senha" placeholder="Digite sua senha" required>
+                    </div>
+                    <button type="submit" class="btn-input">Entrar</button>
+                    <div class="links">
+                        <a href="#">Esqueceu a senha?</a> |
+                        <a href="#">Criar conta</a>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
