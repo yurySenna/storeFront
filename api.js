@@ -12,12 +12,12 @@ async function carregarSecao(categorias, containerId) {
       const precoantigo = Number(produto.precoantigo).toLocaleString('pt-BR', {
         style: 'decimal',
         currency: 'BRL'
-    });
+      });
 
-    const precoatual = Number(produto.precoatual).toLocaleString('pt-BR', {
+      const precoatual = Number(produto.precoatual).toLocaleString('pt-BR', {
         style: 'decimal',
         currency: 'BRL'
-    });
+      });
       const card = `
                  <div class="card" onclick='abrirModal(${JSON.stringify(produto)})'>
                     <div class="caixa-img">
@@ -75,26 +75,25 @@ async function buscarProdutos(termo) {
     produtos.forEach(produto => {
       const precoantigo = Number(produto.precoantigo).toLocaleString('pt-BR', {
         currency: 'BRL'
-    });
+      });
 
-    const precoatual = Number(produto.precoatual).toLocaleString('pt-BR', {
+      const precoatual = Number(produto.precoatual).toLocaleString('pt-BR', {
         currency: 'BRL'
-    });
+      });
       const card = `
-        <div class="card">
-          <div class="caixa-img">
-            <img src="${produto.imagem}" alt="${produto.nome}">
-          </div>
-          <div class="texto-produto">
-            <h2>${produto.nome}</h2>
-            <p>${produto.descricao}</p>
-            <p>De <s>R$ ${precoantigo}</s></p>
-            <span><strong>Por R$ ${precoatual}</strong></span>
-            <button onclick="adicionarAoCarrinho('${produto.nome}', '${precoatual}')">
-              Compre Agora
-            </button>
-          </div>
-        </div>
+        <div class="card" onclick='abrirModal(${JSON.stringify(produto)})'>
+                    <div class="caixa-img">
+                        <img src="${produto.imagem}" alt="${produto.nome}">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>${produto.nome}</h2>
+                        <p class="descricao">${produto.descricao}</p>
+                        <p class="preco-anti">De <s>R$ ${precoantigo}</s></p>
+                        <span><strong>Por R$ ${precoatual}</strong></span>
+                        <p class="cupom">Cupom R$ 10 OFF</p>
+                    </div>
+                    
+                </div>
       `;
       searchContainer.innerHTML += card;
     });

@@ -3,11 +3,11 @@ function mostrarMenu() {
   document.getElementById('menu-lateral').classList.toggle('mostrar');
 
    const botoes = [
-  { nome: 'Smartphones', link: 'paginas/smartphones.html' },
-  { nome: 'Tablets', link: '/paginas/tablets.html' },
-  { nome: 'Notebooks', link: '/paginas/notebooks.html' },
-  { nome: 'Games', link: '/paginas/games.html' },
-  { nome: 'Drones', link: '/paginas/drones.html' },
+  { nome: 'Iphone', link: 'paginas/smartphones.html' },
+  { nome: 'iPad', link: '/paginas/tablets.html' },
+  { nome: 'Macbook', link: '/paginas/notebooks.html' },
+  { nome: 'PS5', link: '/paginas/games.html' },
+  { nome: 'DJI', link: '/paginas/drones.html' },
   { nome: 'AirPods', link: '/paginas/airpods.html' },
   { nome: 'Salão', link: '/paginas/salao.html' },
   { nome: 'TVs', link: '/paginas/tv-video.html' },

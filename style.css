@@ -520,10 +520,11 @@ button {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    /* align-items: center; */
+    justify-content: center;
     height: 100%;
     margin-top: 10px;
     width: 100%;
+    
     
 
 
@@ -567,14 +568,7 @@ button {
     border-radius: 5px;
     margin-top: auto;
     text-align: center;
-    
-    
-
-
-
-
 }
-
 
 .texto-produto button:hover {
     background-color: #8989afd3;
@@ -626,9 +620,6 @@ button {
     background-color: #848d96;
     color: white;
     border-bottom: 1px solid black;
-
-
-
 }
 
 .item-carrinho {
@@ -637,9 +628,6 @@ button {
     font-size: 13px;
     margin-top: 10px;
     padding: 8px;
-
-
-
 }
 
 .fechar {
@@ -749,23 +737,18 @@ button {
 
 .menu-lateral::-webkit-scrollbar {
     width: 5px;
-
 }
 
 .menu-lateral::-webkit-scrollbar-thumb {
     background-color: rgba(17, 16, 16, 0.808);
     border-radius: 10px;
-
 }
 
 .menu-lateral::-webkit-scrollbar-track {
     background-color: white;
 }
-
-
 .menu-lateral.mostrar {
     left: 0;
-
 }
 
 .nav-menu {
@@ -773,7 +756,6 @@ button {
     display: flex;
     flex-direction: column;
     padding: 8px;
-
 }
 
 .item-menu {
@@ -785,8 +767,6 @@ button {
     cursor: pointer;
     transition: background 0.3s;
     text-decoration: none;
-    
-
 }
 
 .btn-nav-menu {
@@ -809,7 +789,7 @@ button {
         transition: transform 0.5s ease-in-out;
         min-width: 120px;
         justify-content: center;
-        font-weight: bolder;
+        
 
     }
 
@@ -822,19 +802,15 @@ button {
 
 .item-menu span {
     font-size: 14px;
-    font-weight: lighter;
+    /* font-weight: lighter; */
     font-family: sans-serif;
     color: black;
-    
-
 }
 
 .item-menu img {
     width: 20px;
 
 }
-
-
 .item-menu:hover {
     background-color: white;
 }
@@ -852,8 +828,6 @@ button {
     background-color: #c2c2c2;
     width: 50px;
     border-radius: 5px;
-
-
 }
 
 .fundo-cep {
@@ -870,19 +844,21 @@ button {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-
-
 }
 
 .card-cep {
     background: #f1f1f1;
     padding: 10px;
     border-radius: 10px;
-    width: 300px;
+    width: 350px;
     height: auto;
     transform: scale(0);
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    animation: fadeIn 1s ease-in-out;
+    text-align: center;
+          
 }
 
 .fundo-cep.aberto {
@@ -903,14 +879,18 @@ button {
     padding: 10px;
 }
 
-.form-cep>input {
-    width: 100%;
-    height: 35px;
-    padding: 5px;
-    border-radius: 20px;
-    border: 1px solid black;
-    text-align: center;
-    font-weight: bold;
+.form-cep > input {
+     width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.3s;
+
+}
+
+.form-cep > input:focus {
+      border-color: #6c63ff;
 
 }
 
@@ -924,24 +904,26 @@ button {
     font-size: 20px;
     top: 0;
     font-weight: bolder;
-
-
 }
 
 .botao-buscar-cep {
-    width: 200px;
-    height: 35px;
-    background-color: darkgreen;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    color: white;
-    font-size: 16px;
-    margin: 15px;
-
-
-
-
+     width: 100%;
+      padding: 12px;
+      background: #6c63ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 10px;
 }
+
+.botao-buscar-cep:hover {
+      background: #5548c8;
+    }
+
 /* secao login */
 .botao-fechar-login {
     float: right;
@@ -949,8 +931,6 @@ button {
     top: 0;
     font-weight: 600;
     padding: 10px;
-
-
 }
 
 .card-login {
@@ -1107,6 +1087,7 @@ button {
     justify-content: center;
     height: 100%;
     padding: 40px;
+    width: 500px;
 
 
 
@@ -1115,6 +1096,7 @@ button {
         width: 330px;
         max-width: 100%;
         object-fit: cover;
+        
 
     }
 
@@ -1122,11 +1104,14 @@ button {
 }
 
 .modal-text {
-    padding: 40px;
+    padding: 50px 0px 0px 15px;
     flex-direction: column;
     text-align: start;
     flex: 1;
     border-left: 0.5px solid rgba(0, 0, 0, 0.185);
+    height: 400px;
+   
+    
     
     h2 {
         font-size: 30px;
@@ -1330,17 +1315,31 @@ footer {
         flex-direction: row;
         width: 420px;
         height: 210px;
+    }
 
+     .texto-produto h2 {
+        margin-bottom: 3px;
+        font-size: 14px;
+     }
+
+    .descricao {
+        margin-bottom: 3px;
+    }
+
+    .preco-anti {
+        margin-bottom: 5px;
+    }
+    .texto-produto span {
+        margin-bottom: 5px;
+    }
+    .cupom {
+        margin-top: 8px;
     }
 
     .modal-card {
         flex-direction: column;
         align-items: center;
         height: 540px;
-        
-        
-        
-
     }
 
     .botao-fechar {
